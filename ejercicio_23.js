@@ -8,21 +8,26 @@ es, se sale del programa con un mensaje de error. */
 // Con ciclo for----------------------------------------------------------
 
 
-let num = prompt('Escribe un numero para ver su factorial: ')
+let num = Number(prompt('Escribe un numero para ver su factorial: '))
 let resultado = 1;
 
-for(let i = 1; i <= num; i++){
-   resultado *= i
+if (typeof num === 'number' && !Number.isNaN(num)) {
+    for(let i = 1; i <= num; i++){
+    resultado *= i
+    }
+}else{
+    alert('ERROR!!')
 }
-console.log(`El factorial del numero introducido es ${resultado}`)
+alert(`El factorial del numero ${num} es ${resultado}`)
+
+
 
 
 
 // Con condicional while---------------------------------------------------
 
-// let num = prompt('Escribe un numero para ver su factorial: ')
+// let num = Number(prompt('Escribe un numero para ver su factorial: '))
 // let resultado = num;
-
 // while (num > 1) {
 //     num--
 //     resultado = resultado * num
