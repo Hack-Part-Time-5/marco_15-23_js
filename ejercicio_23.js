@@ -11,14 +11,14 @@ es, se sale del programa con un mensaje de error. */
 let num = Number(prompt('Escribe un numero para ver su factorial: '))
 let resultado = 1;
 
-if (typeof num === 'number' && !Number.isNaN(num)) {
+if (!Number.isNaN(num)) {
     for(let i = 1; i <= num; i++){
     resultado *= i
     }
+    alert(`El factorial del numero ${num} es ${resultado}`)
 }else{
     alert('ERROR!!')
 }
-alert(`El factorial del numero ${num} es ${resultado}`)
 
 
 
